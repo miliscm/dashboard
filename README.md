@@ -28,3 +28,10 @@ Gray
 Roboto bold <br />
 Roboto Medium <br />
 Roboto Regular
+
+# Results
+
+![Desktop - 2](https://user-images.githubusercontent.com/43863263/88056363-cad74700-cb36-11ea-91b6-addf23aa6877.png)
+<br />
+
+![iPhone 11 Pro Max - 2](https://user-images.githubusercontent.com/43863263/88056435-ecd0c980-cb36-11ea-90dd-a4e5a8172f4a.png)
