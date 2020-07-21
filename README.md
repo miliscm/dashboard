@@ -25,6 +25,6 @@ Gray
 
 ### `Typography`
 
-Roboto bold
-Roboto Medium
+Roboto bold <br />
+Roboto Medium <br />
 Roboto Regular
