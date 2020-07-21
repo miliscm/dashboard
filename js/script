@@ -1,0 +1,59 @@
+const allday = document.querySelector("input[type=checkbox]");
+const inputsTime = document.querySelectorAll("input[type=time]");
+const eventMenuExterno = document.getElementById("event");
+const eventMenuMobile = document.getElementById("event-menu");
+const submenuEvent = document.querySelector(".submenuEvent");
+const internalSubmenu = document.querySelector(".internal-submenu");
+
+function disableInput() {
+  if (allday.checked) {
+    inputsTime.forEach((element) => {
+      element.disabled = true;
+      element.style.opacity = 0.4;
+    });
+  } else {
+    inputsTime.forEach((element) => {
+      element.disabled = false;
+      element.style.opacity = 1;
+    });
+  }
+}
+
+function animatedMenu() {
+  document.querySelector(".nav-mobile").classList.toggle("enable");
+}
+function closeMenu() {
+  document.querySelector(".nav-mobile").classList.remove("enable");
+}
+
+function alertaSave() {
+  if (document.querySelector("input").value.length > 3) {
+    alert("Salvo com sucesso.");
+  } else {
+    alert("Informe um título. Documento não salvo.");
+  }
+}
+function alertaCancel() {
+  alert("Cancelado");
+}
+
+eventMenuExterno.addEventListener("click", function () {
+  submenuEvent.classList.toggle("active");
+});
+eventMenuMobile.addEventListener("click", function () {
+  internalSubmenu.classList.toggle("active");
+});
+
+submenuEvent.addEventListener("mouseleave", function () {
+  submenuEvent.classList.remove("active");
+});
+
+internalSubmenu.addEventListener("mouseleave", function () {
+  internalSubmenu.classList.remove("active");
+});
+
+document.getElementById("save").addEventListener("click", alertaSave);
+document.getElementById("cancel").addEventListener("click", alertaCancel);
+document.querySelector(".menu-mobile").addEventListener("click", animatedMenu);
+document.querySelector(".nav-mobile img").addEventListener("click", closeMenu);
+allday.addEventListener("click", disableInput);
